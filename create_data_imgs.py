@@ -1,3 +1,10 @@
+'''
+
+Program used take picture to track gas consumption of a gasmeter.
+Takes a picture every 1 second.
+
+'''
+
 import os
 import cv2
 import time
