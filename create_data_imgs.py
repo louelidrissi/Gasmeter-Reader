@@ -1,7 +1,6 @@
 '''
 
-Program used take picture to track gas consumption of a gasmeter.
-Takes a picture every 1 second.
+    Program used take pictures to train the analog dial reader code.
 
 '''
 
@@ -16,69 +15,13 @@ def close(cam):
     cv2.destroyAllWindows()
     exit()
 
-def start(cam, elapsed_time):
-    img_counter = 0
-    print("Operation in progress ...")
-    while img_counter <= 300:
-        img_counter += 1
-        ret, frame = cam.read()
-
-        if ret:
-            cv2.imshow("frame", frame)
-            k = cv2.waitKey(1) #& 0xFF
-
-            if k == ord('c'):
-                close(cam)
-
-            img_name= "Gasmeter_fullshot"+ str(datetime.now().strftime('%Y_%m_%d_%H_%M_%S'))+".png"
-            #img_name = "opencv_frame_{}.bmp".format(img_counter)
-            read = cv2.imwrite(os.path.join(path, img_name), frame)
-            print("read", read, img_counter )
-            time.sleep(elapsed_time)
-
-        else:
-            print("failed to grab frame")
-            exit()
-
-    close(cam)
-
-
-
-def capture(path, cam_num, imgs_count, elapsed_time):
-    cam = cv2.VideoCapture(cam_num)
-
-    cv2.namedWindow("frame")
-
-    print("Press s when you are ready to start taking pictures")
-
-    while(True):
-        ret, frame = cam.read()
-        if ret:
-            cv2.imshow("frame", frame)
-            k = cv2.waitKey(1) #& 0xFF
-            #cam.release()
-            if k == ord('c'):
-                 close(cam)
-
-            elif k == ord('s'):
-                start(cam, elapsed_time)
-
-        else:
-            print("failed to grab frame")
-            exit()
-    close(cam)
-
-
 def time_elapsed(cam_num):
+    print("Press s to start and c to stop the time needed for one tick")
     start_time = 0
     elapsed_time = 0
 
     cam = cv2.VideoCapture(0)
-
     cv2.namedWindow("frame")
-
-    print("Press s to start and c to stop the time needed for one tick")
-
 
     while(True):
         ret, frame = cam.read()
@@ -94,32 +37,90 @@ def time_elapsed(cam_num):
             if k == ord('c'):
                 print("stop")
                 elapsed_time = time.time() - start_time
+
                 cam.release()
                 cv2.destroyAllWindows()
+
                 print(time.strftime("%H:%M:%S", time.gmtime(elapsed_time)) )
                 break
 
         else:
-            print("failed to grab frame")
+            print("Failed to grab frame. Please try again.")
             exit()
 
     #print("%02d:%02d:%02d" % (elapsed_time // 3600, (elapsed_time % 3600 // 60), (elapsed_time % 60 // 1)))
-
     return elapsed_time
 
+def start(cam, total_imgs, elapsed_time):
+    print("Operation in progress ...")
+    img_counter = 0
+
+    while img_counter <= total_imgs:
+        img_counter += 1
+        ret, frame = cam.read()
+
+        if ret:
+            cv2.imshow("frame", frame)
+            k = cv2.waitKey(1)
+
+            if k == ord('c'):
+                close(cam)
+
+            img_name= "Gasmeter_fullshot"+ str(datetime.now().strftime('%Y_%m_%d_%H_%M_%S'))+".png"
+            #read = cv2.imwrite(os.path.join(path, img_name), frame)
+            cv2.imwrite(os.path.join(path, img_name), frame)
+            #print("read", read, img_counter ) 
+            time.sleep(elapsed_time)
+
+        else:
+            print("Failed to grab frame. Please try again.")
+            exit()
+
+    close(cam)
+
+
+def capture(path, cam_num, total_imgs, elapsed_time):
+    print("Enter 's' to start taking pictures and 'c' to quit the program at any moment.")
+
+    cam = cv2.VideoCapture(cam_num)
+    cv2.namedWindow("frame")
+
+    while(True):
+        ret, frame = cam.read()
+
+        if ret:
+            cv2.imshow("frame", frame)
+            k = cv2.waitKey(1)
+
+            if k == ord('c'):
+                 close(cam)
+
+            elif k == ord('s'):
+                start(cam, total_imgs, elapsed_time)
+
+        else:
+            print("Failed to grab frame. Please try again.")
+            exit()
+
+    close(cam)
 
 
 if __name__ == "__main__":
-    print("Enter 's' to start taking pictures and 'c' to quit the program at any moment.")
-    print("Pls enter the camera number (0 or -1)")
+    print("Please enter the following info:")
+
+    #to fill once project is complete
+
+    print("Enter the camera number (0 or -1)") #look up for what cam num is called
     cam_num = 0 # = input()
+
+    print("Enter the number of pictures you want the program to take")
+    total_imgs = 500 # = input()
+
+    print("Indicate the folder you want your images to be saved in: ")
+    path = '/Users/labuser/Documents/Dial code/images/'
 
     elapsed_time = time_elapsed(cam_num)
 
-    print("Pls enter the number of pictures you want the program to take")
-    imgs_count = 500 # = input()
+    capture(path, cam_num, total_imgs, elapsed_time)
 
-    path= '/Users/labuser/Documents/Dial code/images/'
-
-    capture(path, cam_num, imgs_count, elapsed_time)
-    print("capture over")
+    print("The image capture process is over.")
