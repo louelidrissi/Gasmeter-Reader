@@ -1,8 +1,10 @@
 '''
-    Labels the training dataset pictures
-    and save them to a csv file
-    dial1 is the 0.5 cf dial
-    dial2 is the 2cf dial
+        Labels the training dataset pictures
+      &
+        Saves them to a csv file
+        
+        dial1 is the 0.5 cf dial
+        dial2 is the 2cf dial
 
 '''
 import os
