@@ -1,6 +1,6 @@
 '''
 
-    Program used take pictures to train the analog dial reader code.
+    Takes imgs to train the analog dial reader 
 
 '''
 
