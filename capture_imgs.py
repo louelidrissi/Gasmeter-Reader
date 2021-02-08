@@ -1,6 +1,6 @@
 '''
 
-    Takes imgs to train the analog dial reader 
+    Takes imgs of the gasmeter
 
 '''
 
