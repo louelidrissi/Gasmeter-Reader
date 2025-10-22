@@ -6,8 +6,8 @@
 1. [Set-up](#set-up)
 2. [Data Pre-Processing](#data-pre-processing)
 3. [Classification Guidelines](#classification-guidelines)
-4. [Training Input](#training-input-sample)
-5. [Testing Input](#testing-input-sample)
+4. [Training Input Sample](#training-input-sample)
+5. [Testing Input Sample](#testing-input-sample)
 6. [CNN Model Architecture](#cnn-model-architecture)
 7. [Confusion matrix for Dial-Reader](#confusion-matrix-for-dial-reader)
 8. [Confusion matrix for Digit-Reader](#confusion-matrix-for-digit-reader)
@@ -38,13 +38,13 @@ Training and testing dataset include unique images with no overlap between the d
 
 ## Training Input Sample:
 
-<img src="https://github.com/user-attachments/assets/4358cdd1-fa8d-47c0-ae86-c043b944212f" alt="generated_dataset_example" width="300" />
-<img src="https://github.com/user-attachments/assets/42bce19a-ad26-42b0-9777-2a3df5064731" alt="temp_TRAIN" width="300" />
+<img src="https://github.com/user-attachments/assets/4358cdd1-fa8d-47c0-ae86-c043b944212f" alt="generated_dataset_example" width="400" />
+<img src="https://github.com/user-attachments/assets/42bce19a-ad26-42b0-9777-2a3df5064731" alt="temp_TRAIN" width="400" />
 
 ## Testing Input Sample:
 
-<img src="https://github.com/user-attachments/assets/1d2721a7-cc2c-4214-bf16-213a9691618b" alt="temp" width="300" />
-<img src="https://github.com/user-attachments/assets/c0533a46-27d3-49ad-b793-bdf152030422" alt="temp_vali" width="300" />
+<img src="https://github.com/user-attachments/assets/1d2721a7-cc2c-4214-bf16-213a9691618b" alt="temp" width="500" />
+<img src="https://github.com/user-attachments/assets/c0533a46-27d3-49ad-b793-bdf152030422" alt="temp_vali" width="500" />
 
 ## CNN Model Architecture:
 
