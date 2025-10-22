@@ -31,10 +31,11 @@ Gasmeter's digits and dials are selected as shown below:
 
 <img src="https://github.com/user-attachments/assets/076b27ff-a851-4bc2-a034-89f20a3550a7" alt="gasmeter_red" width="300" />
 
-To save time when labeling dials, Photoshop was used to separate the needle in the upfrom the dial, generating multiple images of needles and dials to train and test the model on variations. The needle images were then merged with dial images and rotated acriss categories using Python Imaging Library.
+The user initially selects the red sections. The coordinates of that section are then saved and used for all captured images using OpenCV. 
 
-Data was augmented using Augmentor library. 
-Training and testing dataset include unique images with no overlap between the datasets. 
+To save time when labeling dials, Photoshop was used to separate the needle in the upfrom the dial, generating multiple images of needles and dials to train and test the model on variations. The needle images were then merged with dial images and rotated across categories using Python Imaging Library.
+
+Data was augmented to account for light and potential gasmeter screen scratches. Training and testing dataset include unique images with no overlap between the datasets. 
 
 ## Training Input Sample:
 
