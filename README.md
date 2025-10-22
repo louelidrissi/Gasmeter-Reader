@@ -3,9 +3,9 @@
 
 # Table of Contents
 
-1. [Gasmeter Image](#gasmeter-to-implement-digit-and-dial-reading-using-opencv-and-cnn)
-2. [Training Input]
-3. [Testing Input]
+1. [Gasmeter Image](#gasmeter-image)
+2. [Training Input](#training-input)
+3. [Testing Input](#testing-input)
 4. [Confusion matrix for Dial-Reader](#confusion-matrix-for-dial-reader)
 5. [Confusion matrix for Digit-Reader](#confusion-matrix-for-digit-reader)
 6. [Model based on DeepGauge-ML-Demo GitHub](#model-based-on-deepgauge-ml-demo-github)
