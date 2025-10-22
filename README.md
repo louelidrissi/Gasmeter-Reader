@@ -17,7 +17,6 @@ A simple USB Camera is set up in front of the Gasmeter to collect images. A Step
 
 <img src="https://github.com/user-attachments/assets/9136662c-9cc6-4ca6-824d-9c6b7a6ec2f8" alt="stepperMotorController" width="300" />
 
-Training and testing dataset include unique images with no overlap between the datasets. 
 
 ## Classification Guidelines: 
 To create labeled Dial dataset for supervized image classification, the dial is divided into 9 sections (0-9). Each section indicates different needle positions. So the reading is approximated to +/- 0.05 as shown below: 
@@ -33,7 +32,8 @@ Gasmeter's digits and dials are selected as shown below:
 
 To save time when labeling dials, Photoshop was used to separate the needle in the upfrom the dial, generating multiple images of needles and dials to train and test the model on variations. The needle images were then merged with dial images and rotated acriss categories using Python.
 
-Data was augmented using Augmentor library.
+Data was augmented using Augmentor library. 
+Training and testing dataset include unique images with no overlap between the datasets. 
 
 ## Training Input Sample:
 
