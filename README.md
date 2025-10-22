@@ -21,7 +21,7 @@ A simple USB Camera is set up in front of the Gasmeter to collect images. A Step
 ## Classification Guidelines: 
 To create labeled Dial dataset for supervized image classification, the dial is divided into 9 sections (0-9). Each section indicates different needle positions. So the reading is approximated to +/- 0.05 as shown below: 
 
-<img src="https://github.com/user-attachments/assets/90b39faa-7640-4459-b17d-2753831c4f7a" alt="label_cat" width="300" />
+<img src="https://github.com/user-attachments/assets/90b39faa-7640-4459-b17d-2753831c4f7a" alt="label_cat" height="300" />
 
 Each digit is assigned to a corresponding category: e.g., 0 to category 0, 1 to category 2.
 
