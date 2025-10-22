@@ -1,4 +1,4 @@
-# Automating Gasmeter Digit and Dial Reading using Image Classification
+# Gasmeter Digit and Dial Reading using Image Classification
 
 
 # Table of Contents
