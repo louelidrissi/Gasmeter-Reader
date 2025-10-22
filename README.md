@@ -8,7 +8,7 @@
 3. [Testing Input](#testing-input)
 4. [Confusion matrix for Dial-Reader](#confusion-matrix-for-dial-reader)
 5. [Confusion matrix for Digit-Reader](#confusion-matrix-for-digit-reader)
-6. [Model based on DeepGauge-ML-Demo GitHub](#model-based-on-deepgauge-ml-demo-github)
+6. [Model Source Repository](#model-based-on-deepgauge-ml-demo-github)
 
 ## Gasmeter Image:
 
@@ -33,4 +33,6 @@
 <img src="https://github.com/user-attachments/assets/ef3a55a5-1066-48e3-ba2d-dfd5b471cdfa" alt="cm with digit lables" width="300" />
 
 
-## ML Model based on : [DeepGauge-ML-Demo GitHub](https://github.com/louelidrissi/DeepGauge-ML-Demo)
+## Model Source Repository : 
+
+Model used in the implementation of Dial and Digit Reader is based on part of the Model in the following repository: [DeepGauge-ML-Demo GitHub](https://github.com/louelidrissi/DeepGauge-ML-Demo)
