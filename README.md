@@ -38,8 +38,8 @@ Training and testing dataset include unique images with no overlap between the d
 
 ## Training Input Sample:
 
-<img src="https://github.com/user-attachments/assets/4358cdd1-fa8d-47c0-ae86-c043b944212f" alt="generated_dataset_example" width="400" />
-<img src="https://github.com/user-attachments/assets/42bce19a-ad26-42b0-9777-2a3df5064731" alt="temp_TRAIN" width="400" />
+<img src="https://github.com/user-attachments/assets/4358cdd1-fa8d-47c0-ae86-c043b944212f" alt="generated_dataset_example" width="500" />
+<img src="https://github.com/user-attachments/assets/42bce19a-ad26-42b0-9777-2a3df5064731" alt="temp_TRAIN" width="500" />
 
 ## Testing Input Sample:
 
@@ -48,7 +48,7 @@ Training and testing dataset include unique images with no overlap between the d
 
 ## CNN Model Architecture:
 
-<img src="https://github.com/user-attachments/assets/a6469719-7ffc-4536-bb51-1bb64998f174" alt="archi" width="300" />
+<img src="https://github.com/user-attachments/assets/692a1a74-d239-4a5c-bd3b-bfc6ad445a45" alt="archi2" width="300" />
 
 ## Confusiong matrix for Dial-Reader : 
 
