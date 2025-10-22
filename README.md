@@ -1,4 +1,4 @@
-# Automating Gasmeter Digit and Dial Reading using Image Classification and Computer Vision
+# Automating Gasmeter Digit and Dial Reading using Image Classification
 
 
 # Table of Contents
@@ -31,7 +31,7 @@ Gasmeter's digits and dials are selected as shown below:
 
 <img src="https://github.com/user-attachments/assets/076b27ff-a851-4bc2-a034-89f20a3550a7" alt="gasmeter_red" width="300" />
 
-To save time when labeling dials, Photoshop was used to separate the needle in the upfrom the dial, generating multiple images of needles and dials to train and test the model on variations. The needle images were then merged with dial images and rotated acriss categories using Python.
+To save time when labeling dials, Photoshop was used to separate the needle in the upfrom the dial, generating multiple images of needles and dials to train and test the model on variations. The needle images were then merged with dial images and rotated acriss categories using Python Imaging Library.
 
 Data was augmented using Augmentor library. 
 Training and testing dataset include unique images with no overlap between the datasets. 
