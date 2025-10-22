@@ -22,12 +22,13 @@ Training and testing dataset include unique images with no overlap between the d
 ## Classification Guidelines: 
 To create labeled Dial dataset for supervized image classification, the dial is divided into 9 sections (0-9). Each section indicates different needle positions. So the reading is approximated to +/- 0.05 as shown below: 
 
-<img src="https://github.com/user-attachments/assets/076b27ff-a851-4bc2-a034-89f20a3550a7" alt="label_cat" width="300" />
+<img src="https://github.com/user-attachments/assets/90b39faa-7640-4459-b17d-2753831c4f7a" alt="label_cat" width="300" />
 
 Each digit is assigned to a corresponding category: e.g., 0 to category 0, 1 to category 2.
 
 ## Data Pre-Processing:
-Gasmeter's digits and dials are selected, then passed to the Model to determine the reading. 
+Gasmeter's digits and dials are selected as shown below: 
+
 <img src="https://github.com/user-attachments/assets/076b27ff-a851-4bc2-a034-89f20a3550a7" alt="gasmeter_red" width="300" />
 
 To save time when labeling dials, Photoshop was used to separate the needle in the upfrom the dial, generating multiple images of needles and dials to train and test the model on variations. The needle images were then merged with dial images and rotated acriss categories using Python.
