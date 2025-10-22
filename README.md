@@ -13,7 +13,7 @@
 8. [Model Reference](#model-based-on-deepgauge-ml-demo-github)
 
 ## Set-up:
-A simple USB Camera is set up in front of the Gasmeter to collect images. A Stepper Motor Controller is used to run the Gasmeter and control the rate of Digit Image collection and labeling. 
+A simple USB Camera is set up in front of the Gasmeter to collect images. A Stepper Motor Controller is used to run the Gasmeter and control the rate of image collection and labeling. 
 
 <img src="https://github.com/user-attachments/assets/9136662c-9cc6-4ca6-824d-9c6b7a6ec2f8" alt="stepperMotorController" width="300" />
 
