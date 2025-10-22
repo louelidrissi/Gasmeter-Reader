@@ -16,8 +16,8 @@
 
 ## Training Input:
 
-<img src="https://github.com/user-attachments/assets/42bce19a-ad26-42b0-9777-2a3df5064731" alt="temp_TRAIN" width="300" />
 <img src="https://github.com/user-attachments/assets/4358cdd1-fa8d-47c0-ae86-c043b944212f" alt="generated_dataset_example" width="300" />
+<img src="https://github.com/user-attachments/assets/42bce19a-ad26-42b0-9777-2a3df5064731" alt="temp_TRAIN" width="300" />
 
 ## Testing Image:
 
