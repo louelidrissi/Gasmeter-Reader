@@ -8,9 +8,10 @@
 3. [Classification Guidelines](#classification-guidelines)
 4. [Training Input](#training-input-sample)
 5. [Testing Input](#testing-input-sample)
-6. [Confusion matrix for Dial-Reader](#confusion-matrix-for-dial-reader)
-7. [Confusion matrix for Digit-Reader](#confusion-matrix-for-digit-reader)
-8. [Model Reference](#model-based-on-deepgauge-ml-demo-github)
+6. [CNN Model Architecture](#cnn-model-architecture)
+7. [Confusion matrix for Dial-Reader](#confusion-matrix-for-dial-reader)
+8. [Confusion matrix for Digit-Reader](#confusion-matrix-for-digit-reader)
+9. [Model Reference](#model-based-on-deepgauge-ml-demo-github)
 
 ## Set-up:
 A simple USB Camera is set up in front of the Gasmeter to collect images. A Stepper Motor Controller is used to run the Gasmeter and control image capture rate and labeling. 
@@ -21,7 +22,7 @@ A simple USB Camera is set up in front of the Gasmeter to collect images. A Step
 ## Classification Guidelines: 
 To create labeled Dial dataset for supervized image classification, the dial is divided into 9 sections (0-9). Each section indicates different needle positions. So the reading is approximated to +/- 0.05 as shown below: 
 
-<img src="https://github.com/user-attachments/assets/90b39faa-7640-4459-b17d-2753831c4f7a" alt="label_cat" height="300" />
+<img src="https://github.com/user-attachments/assets/90b39faa-7640-4459-b17d-2753831c4f7a" alt="label_cat" height="400" />
 
 Each digit is assigned to a corresponding category: e.g., 0 to category 0, 1 to category 2.
 
@@ -44,6 +45,10 @@ Training and testing dataset include unique images with no overlap between the d
 
 <img src="https://github.com/user-attachments/assets/1d2721a7-cc2c-4214-bf16-213a9691618b" alt="temp" width="300" />
 <img src="https://github.com/user-attachments/assets/c0533a46-27d3-49ad-b793-bdf152030422" alt="temp_vali" width="300" />
+
+## CNN Model Architecture:
+
+<img src="https://github.com/user-attachments/assets/a6469719-7ffc-4536-bb51-1bb64998f174" alt="archi" width="300" />
 
 ## Confusiong matrix for Dial-Reader : 
 
