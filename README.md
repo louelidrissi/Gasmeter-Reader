@@ -35,4 +35,4 @@
 
 ## Model Source Repository : 
 
-Model used in the implementation of Dial and Digit Reader is based on part of the Model in the following repository: [DeepGauge-ML-Demo GitHub](https://github.com/louelidrissi/DeepGauge-ML-Demo)
+Model used in the implementation of Dial and Digit Reader is based on part of the Gauge Reaser Deep Learning Model in the following repository: [DeepGauge-ML-Demo GitHub](https://github.com/louelidrissi/DeepGauge-ML-Demo)
