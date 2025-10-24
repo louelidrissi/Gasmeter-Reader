@@ -12,30 +12,27 @@
 7. [Confusion matrix for Dial-Reader](#confusion-matrix-for-dial-reader)
 8. [Confusion matrix for Digit-Reader](#confusion-matrix-for-digit-reader)
 9. [Model Reference](#model-based-on-deepgauge-ml-demo-github)
+10. [Future Improvements](#future-improvements)
 
 ## Set-up:
-A simple USB Camera is set up in front of the Gasmeter to collect images. A Stepper Motor Controller is used to run the Gasmeter and control image capture rate and labeling. 
+A simple USB Camera is set up in front of the Gasmeter to collect images. A Stepper Motor Controller is used to run the Gasmeter and control image capture rate and labeling. The Gasmeter and camera are assumed to be fixed in place during the reading process.
 
 <img src="https://github.com/user-attachments/assets/9136662c-9cc6-4ca6-824d-9c6b7a6ec2f8" alt="stepperMotorController" width="300" />
 
 
 ## Classification Guidelines: 
-To create labeled Dial dataset for supervized image classification, the dial is divided into 9 sections (0-9). Each section indicates different needle positions. So the reading is approximated to +/- 0.05 as shown below: 
+To create labeled Dial dataset for supervized image classification, the dial is divided into 9 sections (0-9). Each section indicates different needle positions. So the reading is approximated to +/- 0.05 as show by the table below. Each digit is assigned to a corresponding category, 0 to category 0, 1 to category 1 and so on. 
 
 <img src="https://github.com/user-attachments/assets/90b39faa-7640-4459-b17d-2753831c4f7a" alt="label_cat" height="400" />
 
-Each digit is assigned to a corresponding category: e.g., 0 to category 0, 1 to category 2.
-
 ## Data Pre-Processing:
-Gasmeter's digits and dials are selected as shown below: 
+Gasmeter's digits and dials are selected by the user as shown below. Using OpenCV, the coordinates of the selected section are then saved and used for all captured images.
 
 <img src="https://github.com/user-attachments/assets/076b27ff-a851-4bc2-a034-89f20a3550a7" alt="gasmeter_red" width="300" />
 
-The user initially selects the red sections. The coordinates of that section are then saved and used for all captured images using OpenCV. 
+Due to time constraints, the needle detection process was left out for the initial phase of this project. Photoshop was used to separate the needle in the upfront position from the dial, generating multiple images of needles and dials to train and test the model on variations. The needle images were then merged with dial images and rotated across categories and labeled accordingly using Python Imaging Library.
 
-To save time, Photoshop was used to separate the needle in the upfrom the dial, generating multiple images of needles and dials to train and test the model on variations. The needle images were then merged with dial images and rotated across categories and labeled accordingly using Python Imaging Library.
-
-Data was augmented to account for light and potential gasmeter screen scratches. Training and testing dataset include unique images with no overlap between the datasets. 
+Data was augmented to account for light and gasmeter screen effect on the needle's images, and potential scratched. Training and testing dataset include unique images with no overlap between the datasets. 
 
 ## Training Input Sample:
 
@@ -51,15 +48,19 @@ Data was augmented to account for light and potential gasmeter screen scratches.
 
 <img src="https://github.com/user-attachments/assets/692a1a74-d239-4a5c-bd3b-bfc6ad445a45" alt="archi2" width="500" />
 
-## Confusiong matrix for Dial-Reader : 
+## Confusiong matrix for Dial-Reader: 
 
 <img src="https://github.com/user-attachments/assets/bdf81473-adea-4b8b-9729-46b25b32482a" alt="confusinmactix" width="500" />
 
-## Confusiong matrix for Digit-Reader :
+## Confusiong matrix for Digit-Reader:
 
 <img src="https://github.com/user-attachments/assets/ef3a55a5-1066-48e3-ba2d-dfd5b471cdfa" alt="cm with digit lables" width="500" />
 
 
-## Model Referense Repository : 
+## Model Referense Repository: 
 
-Model used in the implementation of Dial and Digit Reader is based on part of the Gauge Reaser Deep Learning Model in the following repository: [DeepGauge-ML-Demo GitHub](https://github.com/louelidrissi/DeepGauge-ML-Demo)
+Model used in the implementation of the Dial and Digit Reader is based on part of the Gauge Reaser Deep Learning Model in the following repository: [DeepGauge-ML-Demo GitHub](https://github.com/louelidrissi/DeepGauge-ML-Demo)
+
+## Future Stages of the Project:
+- Implement image recognition to detect the needle.
+- Connect CNN model to a front-end interface with Cloud database.
