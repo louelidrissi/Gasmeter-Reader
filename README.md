@@ -62,5 +62,4 @@ Data was augmented to account for light and gasmeter screen effect on the needle
 Model used in the implementation of the Dial and Digit Reader is based on part of [DeepGauge-ML-Demo](https://github.com/louelidrissi/DeepGauge-ML-Demo) model, with updated ML libraries (as of 2021).
 
 ## Future Improvements:
-- Implement image recognition to detect the needle without user interfering.
 - Connect CNN model to a front-end interface with Cloud database.
